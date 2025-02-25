@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors | Ashish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="Images/slider_icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gradient-to-b from-indigo-900 via-purple-800 to-indigo-900 text-white h-screen flex items-center justify-center p-5 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+    <main class="text-lg w-full flex flex-col items-center">
+        <h1 class="text-6xl md:text-7xl font-serif mb-10 text-amber-300 drop-shadow-lg">Rock Paper Scissors</h1>
+
+        <!-- Scoreboard -->
+        <div class="flex w-full text-2xl justify-center gap-10">
+            <div class="flex flex-col items-center border px-8 py-4 bg-white bg-opacity-20 rounded-2xl border-white/30 shadow-lg">
+                <div class="font-semibold text-amber-400 underline">Player</div>
+                <p id="playerscore" class="pt-2 text-3xl font-bold">0</p>
+            </div>
+            <div class="flex flex-col items-center border px-8 py-4 bg-white bg-opacity-20 rounded-2xl border-white/30 shadow-lg">
+                <div class="font-semibold text-red-400 underline">Computer</div>
+                <p id="computerscore" class="pt-2 text-3xl font-bold">0</p>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <p class="text-4xl font-serif mt-16 drop-shadow-md">Choose your move</p>
+        <p class="text-2xl font-medium mt-4">Moves Left: <span id="movesnumber" class="font-bold text-yellow-300">3</span></p>
+
+        <div id="buttons" class="flex justify-center gap-6 mt-10 hidden">
+            <button id="rockbtn" class="bg-green-600 text-white rounded-xl h-16 w-32 text-xl font-semibold border-2 border-black hover:bg-green-700 hover:scale-105 transition-transform duration-300 shadow-md">Rock</button>
+            <button id="paperbtn" class="bg-green-600 text-white rounded-xl h-16 w-32 text-xl font-semibold border-2 border-black hover:bg-green-700 hover:scale-105 transition-transform duration-300 shadow-md">Paper</button>
+            <button id="scissorbtn" class="bg-green-600 text-white rounded-xl h-16 w-32 text-xl font-semibold border-2 border-black hover:bg-green-700 hover:scale-105 transition-transform duration-300 shadow-md">Scissor</button>
+        </div>
+
+        <!-- Result Display -->
+        <div id="wondiv" class="mt-12 text-3xl font-serif text-center bg-white bg-opacity-10 py-3 px-6 rounded-xl shadow-md hidden">
+            <span id="playerwon" class="font-bold text-green-400  hidden">Player Won!</span>
+            <span id="compwon" class="font-bold hidden text-green-400">Computer Won!</span>
+            <span id="draw" class="font-bold hidden text-green-400">Draw</span>
+        </div>
+
+        <!-- Play Again & Start Buttons -->
+        <button id="startbtn" class="bg-blue-600 text-white text-xl font-semibold rounded-xl h-16 w-40 mt-6 shadow-md hover:bg-blue-700 hover:scale-110 transition-transform duration-300">Start</button>
+        <button id="playagainbtn" class="bg-blue-600 text-white text-xl font-semibold rounded-xl h-16 w-40 mt-10 hidden shadow-md hover:bg-blue-700 hover:scale-110 transition-transform duration-300">Play Again</button>
+    </main>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
